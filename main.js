@@ -45,10 +45,10 @@ const createWindow = () => {
           click: () =>
             openAboutWindow({
               product_name: appData.productName,
-              icon_path: path.join(__dirname, './img/icon.png'), // Ruta del icono de la aplicación
+              icon_path: path.join(__dirname, './img/icon.png'),
               copyright: appData.copyright,
-              homepage: 'https://vonsim.github.io', // URL de la página de inicio de la aplicación
-              license: 'GNU', // Licencia de la aplicació
+              homepage: 'https://vonsim.github.io',
+              license: 'GNU',
               win_options: {
                 titleBarStyle: "hidden",
                 resizable: false,
