@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+
+  
+  <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179085226-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-179085226-1');
+</script>
+
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <title>VonSim (beta) - A 8088-like Assembly Simulator</title>
+
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="./lib/languages/languages.min.css">
+
+  <link rel="stylesheet" href="./lib/font-awesome-5/css/all.css">
+  <link rel="stylesheet" href="./lib/icomoon/style.css">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/editor.css">
+  <link rel="stylesheet" href="./css/mainboard.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/tutorial.css">
+  <link rel="stylesheet" href="./css/clusterize.css">
+  <link rel="stylesheet" href="./css/scrollbar.css">
+
+</head>
+
+<body style="font-family:Fira Sans">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="./js/mousetrap.min.js"></script>
+  <script type="text/javascript" src="./js/mousetrap-global-bind.min.js"></script>
+  <script type="text/javascript" src="./js/ace/ace.js"></script>
+  <script type="text/javascript" src="./js/clusterize.js"></script>
+
+  <!-- Include Scala.js compiled code -->
+  <script type="text/javascript" src="vonsim-opt.js"></script>
+
+  <script type="text/javascript">
+    var AceRange = ace.require('ace/range').Range
+    vonsim.webapp.Main().main();
+    setTimeout(function () {
+      $('#languageButton').dropdown();
+    }, 5000)
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,512 @@
+#mainboard{
+
+}
+
+#internalDevices{
+  flex: 0 1 auto;
+  
+/*   display: -webkit-flex; Safari
+  display: flex;
+ */  
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
+#externalDevices{
+  flex: 0 1 auto;
+  
+/*   display: -webkit-flex; Safari
+  display: flex;
+ */  
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
+.green-light{
+	color: rgba(0, 128, 0, 0.541);
+}
+
+.fa-lightbulb{
+	margin: 5px
+}
+
+.green{
+	background-color: rgba(0, 128, 0, 0.541);
+}
+
+.red{
+	background-color: rgba(255, 0, 0, 0.541);
+}
+
+/*---- Keys Toggle Switches ----*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 60px;
+}
+
+.switch .slider-box {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+/*   background-color: rgba(255, 0, 0, 0.541); */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  padding-top: 4px;
+/*   padding-left: 8px; */
+  content: attr(bit);
+  color: black;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-box:checked + .slider {
+/*   background-color: rgba(0, 128, 0, 0.541); */
+}
+
+.slider-box:focus + .slider {
+/*   box-shadow: 0 0 1px rgba(0, 128, 0, 0.541); */
+}
+
+.slider-box:checked + .slider:before {
+  -webkit-transform: translateY(-26px);
+  -ms-transform: translateY(-26px);
+  transform: translateY(-26px);
+}
+
+.hidden {
+	display: none;
+}
+
+#cpu{
+  flex: 0 1 auto;
+  
+/*   display: -webkit-flex; Safari
+  display: flex;
+ */  
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content:         space-around;
+
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  flex-wrap: wrap;
+}
+
+.alerts-border {
+	animation: blink 1s;
+    animation-iteration-count: 4;
+}
+
+@keyframes blink {
+	50% {
+/* 		border-color: #5b9dd2; */
+/* 		border-width: 1px; */
+/* 		box-shadow: 0px 0px 2px 3px #c40f0f; */
+		box-shadow: 0px 0px 2px 3px #337ab7;
+		background-color:#303030;
+		
+	}
+}
+
+.tab-pane.active{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+
+.nav-tabs{
+  border-bottom: 2px solid #337ab7;
+}
+
+.nav-tabs>li>a{
+  color: white;
+}
+.nav-tabs>li>a:hover{
+  color: #555;
+}
+
+textarea{
+	resize: none;
+	background-color: rgb(51, 51, 51); 
+}
+
+.mainboardItem h1,.mainboardItem h2,.mainboardItem h3{
+	margin:0px;
+	padding:0px;
+	font-size:1.7em;
+}
+.mainboardItem{
+	min-width:12em;
+    display:block;
+	vertical-align: top;
+	height:100%;
+    margin:15px;
+/*     color:white; */
+/*     background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%); */
+/*     background-color:#A9E3FF; */
+	color:white;
+	background-color: #212121;
+/*     border-radius: 10px; */
+    box-shadow: 0px 0px 1px 2px #444444;
+/*     transition: box-shadow 250ms cubic-bezier(0.55, 0.66, 0.85, 0.94) 0s; */
+}
+.mainboardItemPreContainer{
+	 display:block;
+	margin:0px;
+    padding:0px;
+	vertical-align: top;
+    
+}
+.mainboardItemContainer{
+   	margin:0px;
+    padding:0px;
+}
+.mainboardItemHeader{
+	width:100%;
+	margin:0px;
+/* 	background-color: black; */
+	border-bottom: 2px solid #444444;
+	padding:10px 5px 40px 5px;
+	text-align:left;	
+}
+.mainboardItemHeader h2{
+/*    text-align:left; */
+   margin:0em 0.2em;
+}
+.mainboardItemIcon{
+	float:right;
+	height:24px;
+	margin:0em 0.2em;
+	/*filter: invert(0.9);*/
+}
+.mainboardItemContent{
+	margin:0px;
+    padding:10px 10px; 
+/* 	overflow-y:auto; */
+    
+}
+
+
+
+#cpu,.memory{
+    
+}
+
+.memory {
+}
+
+
+.registersIcon{
+	height:24px;
+	padding-right: 5px;
+}
+
+
+.memoryTable table,.registerTable table{
+	margin:10px;
+    padding: 5px;
+    font-family: 'monospace';
+     margin-left: auto;
+    margin-right: auto;
+}
+.memoryTable table tr td:first-child, .memoryTable table thead th:first-child {
+    border:none;
+    padding-right:1em;
+} 
+.memoryTable table tr td:first-child + td{
+    border: solid thin;
+    border-radius:5px;
+    border-collapse: collapse;  
+}
+.table-hover tbody tr:hover{
+    background-color:#333333;
+    box-shadow: 0px 0px 2px 3px #777777;
+    border:none !important;
+}
+
+#cpu table td, #cpu table th{
+	border-color: white;
+}
+#pio table td, #cpu table th{
+	border-color: white;
+}
+#pic table td, #cpu table th{
+	border-color: white;
+}
+#hand table td, #cpu table th{
+	border-color: white;
+}
+#cdma table td, #cpu table th{
+	border-color: white;
+}
+#timer table td, #cpu table th{
+	border-color: white;
+}
+#keys table td, #cpu table th{
+	border-color: white;
+}
+#leds table td, #cpu table th{
+	border-color: white;
+}
+#printer table td, #cpu table th{
+	border-color: white;
+}
+.memoryTable table{
+	table-layout: fixed;
+	border-color: white;
+}
+.memoryTable table td{
+    padding:4px;
+    height:
+}
+.memoryTable{
+    height:100%;
+    overflow-y:scroll;
+}
+
+
+
+.registerTable td, .memoryTable td{
+  border: 1px solid black;
+  text-align: center;
+}
+
+.memoryTable td, .memoryTable th {
+  padding:1px;
+  text-align: center;
+}
+
+.registerTable td, .registerTable th{
+  padding:3px;
+  min-width: 2em;
+  text-align: center;
+}
+.registerTable{
+/* 	padding:1px; */
+    margin: 0px auto;
+}
+
+
+.registerTable th{
+	font-weight: bold;
+	border:none;
+}
+.registerTable  tr th:first-child{
+    padding-right:0.4em;
+}
+
+.cpuElementHeader h3{
+	padding:0px ;
+	
+	font-size:1.3em;
+	margin-left:2em    ;
+	
+}
+.cpuElementHeader{
+	padding-bottom:7px;
+	text-align:left;
+	width:100%;
+}
+.cpuElementHeader i{
+	position:absolute;
+	text-align:left;
+	font-size: 1.4em;
+	
+}
+.cpuElementHeader h3{
+	text-align: right;
+}
+
+.cpuElement:hover,.cpuElement:active{
+	box-shadow: 0px 0px 2px 3px #777777;
+	background-color:#303030;
+}
+.cpuElement{
+
+	box-shadow: 0px 0px 1px 2px #454545;
+	padding: 10px;
+    margin:10px 5px;
+	margin-bottom: 20px;
+	text-align: center;
+	max-width:15em;
+}
+.cpuElement:last-child{
+	margin-bottom: 10px;
+}
+
+.tooltipHover:hover{
+	box-shadow: 0px 0px 2px 3px #777777;
+}
+
+.keyElement:hover,.keyElement:active{
+	box-shadow: 0px 0px 2px 3px #777777;
+	background-color:#303030;
+}
+
+
+.bitTable{
+	display:inline-block;
+}
+.bitTable td, .bitTable th{
+/*   border: 1px solid black; */
+  padding:1px;
+}
+
+.cpuElementContent{
+	display:flex;
+	flex-direction: column;
+}
+
+.aluComputation{
+	display:flex;
+	flex-direction: row;
+}
+
+.aluOperandB{
+	border-bottom:1px solid white;	
+}
+
+.aluOperation{
+
+	display:flex;
+	align-items: center;
+  	justify-content: center;
+  	padding-right:5px;
+	
+}
+.aluFlags{
+	margin-top:10px;
+	display:flex;
+	flex-direction: row;
+
+align-items: center;
+  justify-content: center;
+}
+
+.flagsTable{
+	margin-left:auto;
+	margin-right:auto;
+}
+.flagsTable td{
+	padding:0px 15px;
+/* 	border:1px solid; */
+}
+.flag{
+	border:1px solid;
+	margin:1px;
+}
+.aluOperation{
+	margin:1px;
+}
+
+.operation{
+	
+}
+.rowWithTooltip{
+    position:relative;
+	
+}
+/* .rowWithTooltip:active span.memoryTooltip{ */
+/*   display:block; */
+/* } */
+
+/* .table-hover tbody tr:hover span.memoryTooltip{ */
+/*     display:block; */
+/* } */
+
+.memoryTooltip{
+  display:none;
+  position:absolute; 
+  z-index:100;
+  border:1px;
+  background-color:black;
+  border-style:solid;
+  border-width:1px;
+  border-color:white;
+  padding:3px;
+  color:white; 
+  top:-20px; 
+  left:-20px;
+}
+
+.addressSearchInput{
+	width: 5em;
+/* 	margin:0px; */
+/* 	padding:0px; */
+	border-radius: 0px;
+	background-color: #EEEEEE;
+	color:black;
+}
+.addressSearchButton{
+	text-align:center;
+/* 	margin:0px; */
+	margin-left:0.2em;
+ 	padding:0.2em;
+	border-radius: 0px;
+}
+
+.addressSearchControls{
+	margin-bottom: 5px;
+}
+
+.toast {
+	position: fixed;
+	z-index: 1;
+	right: 50px;
+	top: 100px;
+	visibility: hidden;
+	max-width: 30%;
+	max-height: 15%;
+	overflow: auto;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+    border-style: solid;
+    border-color: #777;
+    border-width: 1px;
+    border-radius: 3px;
+	font-size: 17px;
+}
+
+.toast.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s;
+	animation: fadein 0.5s;
+}
+
+.toast-content {
+	padding: 16px;
+}
+
+@-webkit-keyframes fadein {
+	from {top: 0; opacity: 0} 
+	to {top: 100px; opacity: 1}
+}
+
+@keyframes fadein {
+	from {top: 0; opacity: 0}
+	to {top: 100px; opacity: 1}
+}

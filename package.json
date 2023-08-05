@@ -1,0 +1,73 @@
+{
+  "name": "vonsim",
+  "productName": "VonSim",
+  "version": "0.0.1",
+  "description": "A VonSim desktop app made with Electron",
+  "copyright": "Copyright © 2023-2023 ZetLink",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --windows nsis:x64 -p never"
+  },
+  "keywords": [
+    "vonsim",
+    "desktop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZetLink/VonSim-Desktop.git",
+    "report": "https://github.com/ZetLink/VonSim-Desktop/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
+  },
+  "author": {
+    "name": "ZetLink",
+    "email": "royalezetlink@gmail.com"
+  },
+  "license": "GNU",
+  "build": {
+    "appId": "com.zetlink.VonSim",
+    "copyright": "Copyright © 2023-2023 ZetLink",
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "VonSim-Desktop",
+        "owner": "ZetLink",
+        "releaseType": "release"
+      }
+    ],
+    "files": [
+      "./css/**/*",
+      "./fonts/**/*",
+      "./img/**/*",
+      "./js/**/*",
+      "./lib/**/*",
+      "./sample/**/*",
+      "*/src/**/*",
+      "./vonsim-opt.js",
+      "./vonsim-opt.js.map",
+      "./index.html",
+      "./main.js",
+      "./package.json"
+    ],
+    "win": {
+      "icon": "./img/icon.png",
+      "artifactName": "VonSim-${version}.${ext}",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "25.3.2",
+    "electron-builder": "24.6.3",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "about-window": "^1.15.2",
+    "electron-context-menu": "^3.6.1"
+  }
+}
