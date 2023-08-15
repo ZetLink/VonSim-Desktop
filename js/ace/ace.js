@@ -15129,7 +15129,7 @@ var EventEmitter = require("./lib/event_emitter").EventEmitter;
 var editorCss = ".ace_editor {\
 position: relative;\
 overflow: hidden;\
-font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;\
+font: 20px/normal 'JetBrainsMonoNerdFontMono', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;\
 direction: ltr;\
 text-align: left;\
 }\
@@ -15287,7 +15287,6 @@ text-align: right;\
 pointer-events: auto;\
 }\
 .ace_text-layer {\
-font: inherit !important;\
 }\
 .ace_cjk {\
 display: inline-block;\

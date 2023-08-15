@@ -5,7 +5,7 @@
 	display: -webkit-flex; 
     display: flex;
     flex-flow: column;
-    font-family: 'Fira Sans',sans-serif;
+    font-family: 'JetBrainsMonoNerdFontMono', 'Fira Sans',sans-serif;
     background:gray;
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "vonsim",
   "productName": "VonSim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A VonSim desktop app made with Electron",
   "copyright": "Copyright © 2023-2023 ZetLink",
   "main": "main.js",

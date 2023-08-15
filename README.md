@@ -17,7 +17,7 @@ npm install
 
 ```sh
 $ npm run
-    - start
+   - start
       electron .
    - build
       electron-builder --windows nsis:x64 -p never
